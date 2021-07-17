@@ -1,0 +1,7 @@
+<h1>The song you have selected is:</h1>
+<h3>Title: <%= @song.title %></h3>
+<h3>Artist: <%= @song.artist.name %></h3>
+
+<h5>Other songs from <%= @song.artist.name %>:</h5>
+
+<p><%= link_to @song.artist.name, artist_path(@song.artist) if @song.artist %></p>
