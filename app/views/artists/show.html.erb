@@ -3,6 +3,7 @@
 
 
 <h5><%= @artist.name %> currently have <%= pluralize(@artist.songs.count, "song") %>,  the songs are:</h5>
+
 <ul>
     <% @artist.songs.each do |s| %>
         <li><%= link_to s.title, song_path(s) %> </li>
